@@ -1,0 +1,38 @@
+{
+  "name": "vm-sentinel",
+  "version": "1.0.0",
+  "description": "VM Sentinel is an intelligent virtual machine (VM) monitoring system that automatically detects idle states and enables remote shutdown via Telegram commands",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=apps/agent\" \"npm run dev --workspace=apps/bot\"",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
+    "lint": "npm run lint --workspaces",
+    "lint:fix": "npm run lint:fix --workspaces",
+    "clean": "npm run clean --workspaces && rimraf node_modules",
+    "typecheck": "npm run typecheck --workspaces"
+  },
+  "devDependencies": {
+    "@types/node": "^18.17.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "concurrently": "^8.2.0",
+    "eslint": "^8.49.0",
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.5",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.2.0",
+    "esbuild": "^0.19.0",
+    "rimraf": "^5.0.0"
+  },
+  "author": "LohZJ",
+  "license": "ISC"
+}

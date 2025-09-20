@@ -1,0 +1,29 @@
+{
+  "name": "@vm-sentinel/shared-types",
+  "version": "1.0.0",
+  "description": "Shared TypeScript interfaces and types for VM Sentinel",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/ --ext .ts",
+    "lint:fix": "eslint src/ --ext .ts --fix",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@vm-sentinel/eslint-config-custom": "*"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "LohZJ",
+  "license": "ISC"
+}
