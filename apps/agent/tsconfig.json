@@ -19,5 +19,10 @@
   ],
   "ts-node": {
     "esm": true
-  }
+  },
+  "references": [
+    {
+      "path": "../../packages/shared-types"
+    }
+  ]
 }

@@ -9,7 +9,7 @@
 export interface SystemMetrics {
   cpuUsage: number;
   memoryUsage: number;
-  diskUsage: number;
+  diskUsage?: number; // Optional - not yet implemented, will be added in future stories
   timestamp: string;
 }
 
